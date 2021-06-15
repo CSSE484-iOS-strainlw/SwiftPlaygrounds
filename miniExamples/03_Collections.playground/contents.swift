@@ -2,27 +2,29 @@ import UIKit
 
 // Basics for arrays
 var names = ["Dave", "Kristy", "McKinley", "Keegan", "Bowen", "Neala"]
-
-
-
-
-
-
-
-
-
+names[1]
+names[2] = "Hello"
+names.count
+if names.contains("Dave"){
+    print("Ye")
+}
 
 // Appending values
 
+var ages = [Int]()
+ages.append(37)
+ages.append(4)
+ages.insert(10, at: 0)
 
+ages
 
-
-
-
-
-
-
-
+ages += [1, 3, 7]
+ages
+if ages.isEmpty{
+    print("Empty")
+}else{
+    print("Array has \(ages.count) elemants")
+}
 
 
 // So, so, SO.. many things you could do with arrays...
@@ -36,6 +38,11 @@ var teenagers = randomAges.filter({
 teenagers.sorted(by: {
     return $0 < $1
 })
+
+teenagers = teenagers.map({
+    return $0 + 100
+})
+teenagers
 
 
 // Dictionaries
@@ -54,3 +61,4 @@ var tuple = ("item1", "item2", "item3", "item4")
 tuple.2
 var namedTuple = (first : "Dave", last : "Fisher")
 namedTuple.last
+namedTuple.1
